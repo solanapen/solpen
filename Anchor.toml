@@ -1,0 +1,21 @@
+[toolchain]
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.devnet]
+solpen = "BF8gXkDySmwV5LRsbLt9L8PDuypgVEX4s3cRJoeeKBpm"
+
+[programs.localnet]
+solpen = "8uGUuPiL85F2Uxp8giTDfV4GSmCfhndDHd3WLo1dA3jQ"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "~/.config/solana/devnet.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
